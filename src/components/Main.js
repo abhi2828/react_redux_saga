@@ -5,6 +5,7 @@ import {
   EmptyCart,
   RemoveFromCart,
 } from "../Redux/action/cartAction";
+import { productListAction } from "../Redux/action/productAction";
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -40,6 +41,15 @@ const Main = () => {
         }}
       >
         Empty
+      </button>
+
+      <button
+        className="btn btn-outline-success d-block mx-auto my-3"
+        onClick={() => {
+          dispatch(productListAction());
+        }}
+      >
+        All List
       </button>
     </>
   );
